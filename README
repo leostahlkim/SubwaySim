@@ -1,0 +1,147 @@
+/**********************************************************
+* Project 1: Metro Simulator
+* CS 15
+* README
+* Written by: Leo Kim
+* Date: 2/13/22
+*********************************************************/
+
+Compile/run:
+     - Compile using
+            make MetroSim
+     - run executable with
+            ./MetroSim stationsFile passFile [commands]
+
+
+Program Purpose:
+     The purpose of this program is to be a fully functioning simulation of the
+MBTA green line. With this program you can move a train through the Green Line
+while loading and unloading passengers and recording it.
+
+Acknowledgements: 
+
+     Reference discussing how to use ostringstreams
+     https://www.cplusplus.com/reference/sstream/ostringstream/
+
+     References Discussing c++ Linked and Array Lists
+     https://en.cppreference.com/w/cpp/container/list
+     https://en.cppreference.com/w/cpp/container/vector
+
+     Reference Discussing iterators
+     https://www.cplusplus.com/reference/iterator/advance/
+
+Files: 
+
+     main.cpp:
+          The main function for the metro simulation.
+
+     MetroSim.cpp:
+          Class implementation for the MetroSim class. A MetroSimcontains a 
+          list of Stations and a Train along with some other member variables.
+          It contains member functions that can read in information from files
+          and run the complete metro simulation.
+
+     MetroSim.h:
+          Class declaration for the MetroSim class. A MetroSimcontains a list
+          of Stations, a Train, an int trackingthe train's location, and an 
+          fstream to store the output.It contains member functions that can 
+          read in information from files and run the complete metro simulation.
+
+     stations.txt:
+          an example file containing a list of stations.
+
+     test_commands.txt:
+          sample list of commands that you could give to the simulator
+
+     the_metroSim:
+          reference implementation for students to see how the simulation
+          should run
+
+     Passenger.h
+          Struct declaration for the Passenger struct. A Passenger is comprised
+          of an id, an intial boarding station, and a final destination 
+          station. The passenger struct also contains a few member functions.
+
+     Passenger.cpp
+          Implementation for the Passenger struct. A Passenger iscomprised of 
+          an id, an intial boarding station, and a final destination station.
+          The passenger struct also contains a few member functions.
+
+     PassengerQueue.cpp
+          Class implementation for the PassengerQueue class. A PassengerQueue
+          is a queue made up of Passenger variables that can be acessed and 
+          altered by a variety of functions.
+
+     PassengerQueue.h
+          Class declaration for the PassengerQueue class. A PassengerQueue 
+          is a queue made up of Passenger variables that can be acessed and 
+          altered by a variety of functions.
+     
+     Station.cpp
+          Class implementation for the Station class. A Station class contains
+          a PassengerQueue of passengers at the station, a station number and 
+          a station name. It also contains a variety of member functions.
+     
+     Station.h
+          Class declaration for the Station class. A Station classcontains a 
+          PassengerQueue of passengers at the station, a station number and a 
+          station name. It also contains a variety of member functions.
+     
+     Train.cpp
+          Class implementation for the Train class. A Train class contains a 
+          list of PassengerQueues with the passengers, on the train sorted by
+          station and an int variable to track the train's location. It also 
+          contains a variety of member functions.
+
+     Train.h
+          Class declaration for the Train class. A Train class contains a list
+          of PassengerQueues with the passengers, on the train sorted by
+          station and an int variable to track the train's location. It also
+          contains a variety of member functions.
+     
+     unit_tests.h
+          Contains all the unit tests I ran in testing my programs.
+     
+     mainTesting.cpp
+          Contains a main function that I used for testing my programs.
+
+Data Structures:
+     PassengerQueue
+          For the PassengerQueue class I used a queue data structure,
+          implemented with a doubly linked list. I decided to use a doubly
+          linked list because it has O(1) complexity when popping an item
+          from the front, while an array list has an O(n) complexity. The
+          other necessary member functions had the same complexities with
+          array lists and linked lists.
+     Train
+          For the Train class I used an array list of PassengerQueues.
+          I decided to use an array list because it has an O(1) complexity
+          when accessing an element at a given index, which I needed to do
+          frequently. Accessing an element at a given index in a linked list
+          has O(n) complexity.
+
+Testing:
+     In order to test most of my program, I used unit tests. After every 
+function I wrote, I would create a variety of different unit tests for it
+that covered every possible edge case I could think of. When unit tests
+failed, I would print error messages using cout at different points
+in the function to see where the function was failing. I used this
+testing strategy to test all my code besides the MetroSim class.
+
+In order to test the MetroSim class, I used a testing file with a main
+function. I decided to do this instead of using the unit test framework
+because it was easier for me to deal with reading in from and outputting
+data to files. Similarly to unit testing, after every function I wrote, I
+would write a variety of different tests in my main that covered all the
+possible base and edge cases I could think of. Whenever I encountered errors
+I would print cout messages at different points in my functions to isolate
+the problem areas. I also used Valgrind to test my functions and make sure
+there were no memory leaks. Additionally, in order to check that my console
+and file outputs were correct, I would run the given MetroSimulation with my
+own for a variety of different cases while storing the console and file
+outputs. I would then use diff to see if there were any differences in the
+outputs.
+
+Part that you found most difficult:
+     What I found most difficult was dealing with iostreams. This is something
+I had learned very little about and we only briefly covered in lecture.
