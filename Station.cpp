@@ -3,8 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/15/22
  *
- *  CS 15 Proj1 A Metro Simulator
- *
  *  Purpose: Class implementation for the Station class. A Station class
  *           contains a PassengerQueue of passengers at the station,
  *           a station number and a station name. It also contains a

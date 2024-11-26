@@ -3,8 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/10/22
  *
- *  CS 15 Proj1 A Metro Simulator
- *
  *  Purpose: Class declaration for the PassengerQueue class. A PassengerQueue
  *           is a queue made up of Passenger variables that can be acessed
  *           and altered by a variety of functions.

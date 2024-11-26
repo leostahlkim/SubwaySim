@@ -3,8 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/17/22
  *
- *  CS 15 Proj1 A Metro Simulator
- *
  *  Purpose: Class implementation for the MetroSim class. A MetroSim
  *           contains a list of Stations and a Train along with some other 
  *           member variables. It contains member functions that 

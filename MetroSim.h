@@ -3,8 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/17/22
  *
- *  CS 15 Proj1 A Metro Simulator
- *
  *  Purpose: Class declaration for the MetroSim class. A MetroSim
  *           contains a list of Stations, a Train, an int tracking
  *           the train's location, and an fstream to store the output.

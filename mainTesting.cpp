@@ -3,7 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/17/22
  *
- *  CS 15 Proj1 A Metro Simulator
  *
  *  Purpose: Testing for the MetroSim class
  */

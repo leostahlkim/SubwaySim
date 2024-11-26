@@ -3,8 +3,6 @@
  *  Name: Leo Kim
  *  Date: 2/16/22
  *
- *  CS 15 Proj1 A Metro Simulator
- *
  *  Purpose: Class implementation for the Train class. A Train class
  *           contains a list of PassengerQueues with the passengers,
  *           on the train sorted by station and an int variable to 
